@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - chmod +x gradlew
+      - chmod +x ./tripmgmt/gradlew
       - ./tripmgmt/gradlew clean
       - ./tripmgmt/gradlew bootWar -Pprod -Pwar
       - docker build -t $REPOSITORY_URI:latest .
