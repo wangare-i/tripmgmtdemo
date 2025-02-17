@@ -16,11 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-<<<<<<< HEAD
-=======
-      - cd ./tripmgmt/gradlew
       - chmod +x gradlew
->>>>>>> 987e4ee (gradlew update)
       - ./gradlew clean
       - ./gradlew bootWar -Pprod -Pwar
       - docker build -t $REPOSITORY_URI:latest .
@@ -31,7 +27,3 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-<<<<<<< HEAD
-
-=======
->>>>>>> 987e4ee (gradlew update)
